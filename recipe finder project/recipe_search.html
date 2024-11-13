@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen bg-cover bg-center" style="background-image: url('img10.avif');" >
+
+   
+    <header class="bg-green-600 text-white p-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold">Recipe Search</h1>
+            <div>
+                <a href="add_product.html" class="bg-white text-green-600 px-6 py-2 rounded-md hover:bg-green-500 hover:text-white transition">Add Product</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="container mx-auto px-6 py-10">
+        <h2 class="text-4xl font-extrtabold text-red-900 text-center mb-6 ">Find Your Favorite Recipes</h2>
+    
+        
+        <div class="flex justify-between items-center mb-6">
+            <input type="text" id="search-bar" placeholder="Search for recipes..." class="w-2/3 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-700">
+            <select id="filter-options" class="p-3 border border-gray-300 rounded-md ml-4 focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-700">
+                <option value="all">All</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select>
+            <button id="search-button" class="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 ml-4 transition">Search</button>
+        </div>
+
+    
+        <div id="recipe-results" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105" onclick="showRecipeDetails('chicken_chilli')">
+                <img src="chilliChiken.webp" alt="Chicken Chilli" class="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Chicken Chilli</h3>
+                    <p class="text-gray-600 mt-2">A spicy and flavorful chicken dish perfect for dinner.</p>
+                </div>
+            </div>
+            
+       
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105" onclick="showRecipeDetails('fish_fry')">
+                <img src="FishFry.webp" alt="Fish Fry" class="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Fish Fry</h3>
+                    <p class="text-gray-600 mt-2">Deliciously crispy fried fish, perfect as a starter.</p>
+                </div>
+            </div>
+
+    
+            <div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105" onclick="showRecipeDetails('fried_rice')">
+                <img src="FriedRice.jpg" alt="Fried Rice" class="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold text-gray-800">Fried Rice</h3>
+                    <p class="text-gray-600 mt-2">A classic Asian rice dish with vegetables and flavors.</p>
+                </div>
+            </div>
+
+
+<div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105" onclick="showRecipeDetails('paneer')">
+    <img src="Pannercurry.jpg" alt="Paneer" class="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110">
+    <div class="p-4">
+        <h3 class="text-xl font-semibold text-gray-800">Paneer</h3>
+        <p class="text-gray-600 mt-2">Soft, creamy paneer dish, a favorite for all occasions.</p>
+    </div>
+</div>
+
+
+<div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300 ease-in-out transform hover:scale-105" onclick="showRecipeDetails('dal')">
+    <img src="DALFRY.jfif" alt="Dal" class="w-full h-64 object-cover transition-transform duration-300 ease-in-out transform hover:scale-110">
+    <div class="p-4">
+        <h3 class="text-xl font-semibold text-gray-800">Dal</h3>
+        <p class="text-gray-600 mt-2">Delicious dal curry, a staple in Indian cuisine.</p>
+    </div>
+</div>
+
+
+<div class="recipe-card bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-xl transition" onclick="showRecipeDetails('mix_veg')">
+    <img src="MixvEGFRY.jpg" alt="Mix Veg" class="w-full h-64 object-cover">
+    <div class="p-4">
+        <h3 class="text-xl font-semibold text-gray-800">Mix Veg</h3>
+        <p class="text-gray-600 mt-2">A colorful mix of vegetables cooked to perfection.</p>
+    </div>
+</div>
+
+
+
+
+        </div>
+
+    </div>
+    <div class="text-center mb-10">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Chicken Chilli</h2>
+        <img src="chilliChiken.webp" alt="Chicken Chilli" class="mx-auto rounded-lg shadow-lg max-w-full h-100 object-cover">
+    </div>
+
+    
+    <div class="text-center mb-10">
+        <p class="text-lg text-gray-600">A spicy and flavorful chicken dish perfect for dinner.</p>
+    </div>
+
+    
+    <div class="text-center mb-10">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Cooking Steps</h3>
+        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+            <li>Marinate the chicken with spices and set aside for 20 minutes.</li>
+            <li>Heat oil in a pan and sauté onions, garlic, and green chilies.</li>
+            <li>Add marinated chicken and cook until tender and juicy.</li>
+            <li>Serve hot with a garnish of chopped green onions.</li>
+        </ol>
+    </div>
+    <div class="text-center mb-10">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Gobi Aloo Curry</h2>
+        <img src="gobi.jpg" alt="Gobi Aloo Curry" class="mx-auto rounded-lg shadow-lg max-w-full h-100 object-cover">
+    </div>
+    
+    <div class="text-center mb-10">
+        <p class="text-lg text-gray-600">A flavorful and hearty curry made with cauliflower and potatoes in a rich, spiced gravy.</p>
+    </div>
+    
+    <div class="text-center mb-10">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Cooking Steps</h3>
+        <ol class="list-decimal list-inside space-y-2 text-gray-700">
+            <li>Heat oil in a pan and sauté onions, garlic, and ginger until golden.</li>
+            <li>Add chopped tomatoes, turmeric, cumin, coriander powder, and cook until tomatoes soften.</li>
+            <li>Add cauliflower florets and diced potatoes, and cook for a few minutes.</li>
+            <li>Pour in water, cover, and cook until the vegetables are tender.</li>
+            <li>Season with salt, add garam masala, and cook for an additional 5 minutes.</li>
+            <li>Garnish with fresh coriander leaves and serve hot with rice or roti.</li>
+        </ol>
+    </div>
+    
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-8 flex items-start space-x-4">
+        <img src="man1.jfif" alt="User 1" class="w-16 h-16 rounded-full object-cover">
+        <div>
+            <h3 class="text-xl font-semibold text-gray-800">John Doe</h3>
+            <div class="flex items-center mb-2">
+                <span class="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="text-gray-600 ml-2">(4/5)</span>
+            </div>
+            <p class="text-gray-700">The recipes are easy to follow, and the results are amazing! I love the dinner options.</p>
+        </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-8 flex items-start space-x-4">
+        <img src="man2.jfif" alt="User 1" class="w-16 h-16 rounded-full object-cover">
+        <div>
+            <h3 class="text-xl font-semibold text-gray-800">munna</h3>
+            <div class="flex items-center mb-2">
+                <span class="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="text-gray-600 ml-2">(3/5)</span>
+            </div>
+            <p class="text-gray-700">The recipes are easy to follow, and the results are amazing! I love the dinner options.</p>
+        </div>
+    </div>
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-8 flex items-start space-x-4">
+        <img src="girl1.jpg" alt="User 1" class="w-16 h-16 rounded-full object-cover">
+        <div>
+            <h3 class="text-xl font-semibold text-gray-800">puspa</h3>
+            <div class="flex items-center mb-2">
+                <span class="text-yellow-500">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                <span class="text-gray-600 ml-2">(5/5)</span>
+            </div>
+            <p class="text-gray-700">The recipes are easy to follow, and the results are amazing! I love the dinner options.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

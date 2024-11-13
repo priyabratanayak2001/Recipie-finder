@@ -1,0 +1,243 @@
+/* *{
+    margin : 0;
+    padding : 0;
+}
+
+.main{
+    width:100%;
+    background-image:url('recipe.jpg');
+    background-position: center;
+    background-size: cover;
+    height:109vh;
+}
+.navbar{
+    width: 1200px;
+    height: 75px;
+    margin:auto;
+}
+.icon{
+    width: 200px;
+    height: 70px;
+    float:left;
+}
+.logo{
+    color: red;
+    font-size: 35px;
+    font-family: Arial;
+    padding-left:20px;
+    float:left;
+    padding-top: 10px;
+}
+
+.menu{
+    width:400px;
+    float:left;
+    height:70px;
+}
+ul{
+    float:left;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+ul li{
+    list-style:none;
+    margin-left: 62px;
+    margin-top: 27px;
+    font-size: 14px;
+
+}
+ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    font-weight: 200;
+    transition: 0.4s ease-in-out;
+
+}
+
+ul li a:hover{
+    color: red;
+}
+p {
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #4CAF50; 
+    font-weight: bold;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    line-height: 1.6; 
+}
+.login-form {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; 
+    text-align: center;
+    z-index: 2;
+}
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.1em;
+    color: #333; 
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; 
+}
+
+.input-group input:focus {
+    border-color: #4CAF50; 
+    outline: none;
+    background-color: #e8f5e9; 
+}
+
+
+.input-group button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50; 
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: #45a049; 
+}
+
+.input-group button:active {
+    background-color: #388e3c; 
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+}
+
+.signup-link a {
+    color: #4CAF50; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+    color: #45a049; 
+}
+ */
+
+ @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Custom base styles */
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+}
+
+@layer components {
+  .main {
+    @apply w-full h-[109vh] bg-cover bg-center;
+    background-image: url('recipe.jpg');
+  }
+
+  .navbar {
+    @apply w-[1200px] h-[75px] mx-auto flex items-center justify-between;
+  }
+
+  .icon {
+    @apply w-[200px] h-[70px] flex items-center;
+  }
+
+  .logo {
+    @apply text-red-600 text-3xl font-arial pl-5 pt-3;
+  }
+
+  .menu {
+    @apply w-[400px] flex justify-center items-center;
+  }
+
+  .menu ul {
+    @apply flex space-x-16;
+  }
+
+  .menu li {
+    @apply list-none;
+  }
+
+  .menu a {
+    @apply text-white text-base font-light hover:text-red-600 transition duration-400;
+  }
+
+  p {
+    @apply text-2xl text-green-600 font-bold text-center mt-10 mb-10;
+  }
+
+  .login-form {
+    @apply bg-white bg-opacity-90 p-10 rounded-xl shadow-lg w-full max-w-md mx-auto mt-10;
+  }
+
+  .login-form h2 {
+    @apply text-2xl font-semibold text-gray-800 mb-8;
+  }
+
+  .input-group {
+    @apply mb-5;
+  }
+
+  .input-group label {
+    @apply block text-gray-800 text-lg mb-2;
+  }
+
+  .input-group input {
+    @apply w-full p-3 text-lg border border-gray-300 rounded-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-green-600;
+  }
+
+  .input-group button {
+    @apply w-full p-3 text-lg bg-green-600 text-white rounded-lg hover:bg-green-700 active:bg-green-800 transition duration-300;
+  }
+
+  .input-group button:active {
+    @apply bg-green-800;
+  }
+
+  .signup-link {
+    @apply mt-5 text-gray-800 text-lg;
+  }
+
+  .signup-link a {
+    @apply text-green-600 font-semibold hover:text-green-700;
+  }
+}
+
+@layer utilities {
+  /* Custom utility classes if necessary */
+}
